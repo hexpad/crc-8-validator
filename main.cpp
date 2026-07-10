@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include <cstdint>
 
 struct TelemetryPacket {
@@ -35,7 +34,7 @@ int main() {
 
     if (receivedCRC == packet.crc) {
         std::cout << "Data verified successfully: UAV Pos: "
-                  << (int)packet.x << "," << (int)packet.y << std::endl;
+                  << std::dec << (int)packet.x << "," << (int)packet.y << "," << (int)packet.z << std::endl;
     } else {
         std::cout << "ERROR: Data corruption detected! Packet rejected." << std::endl;
     }
