@@ -51,3 +51,6 @@ uint8_t receivedCRC = calculateCRC8((uint8_t*)&packet, 3);
 ```
 
 Now the two checksums won't match and you'll get the error line.
+
+## Source Code
+https://github.com/hexpad/crc-8-validator/blob/main/main.cpp
